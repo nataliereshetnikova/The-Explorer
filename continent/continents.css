@@ -1,0 +1,137 @@
+/* SVG */
+#curve-shape
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#curve-shape path
+{
+  fill: white;
+  z-index: -1;
+}
+#curve-bottom{
+    position: absolute;
+    bottom: 0px;
+    fill:white;
+    z-index: -1;
+}
+/* END OF SVG */
+
+/* LOGO */
+#logo{
+    font-size:2.5em;
+    font-weight: 100;
+    color:#54c6eb;
+    position: absolute;
+    left: 10px;
+}
+/* END OF LOGO */
+html{
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body {
+	margin: 20px auto;
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+h2{
+	color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.distribution-map {
+    top:150px;
+    max-width: 1200px;
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.distribution-map > img {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.distribution-map .map-point {
+	cursor: pointer;
+	outline: none;
+	z-index: 0;
+	position: absolute;
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-box-shadow: 5px 2px 6px -6px #000000; 
+    box-shadow: 5px 2px 6px -6px #000000;
+}
+@media (min-width:722px){
+    .centered-y {
+        position: absolute;
+        width: 100%;
+        top: 60%;
+    }
+    #antarctica-btn{
+        top:95%;
+        left:45%;
+    }
+    #europe-btn{
+        top:35%;
+        left:50%;
+    }
+    #oceania-btn{
+        top:76%;
+        left:82.5%;
+    }
+    #namerica-btn{
+        top:35%;
+        left:20%;
+    }
+    #samerica-btn{
+       top:70%;
+       left:27%;
+    }
+    #africa-btn{
+        top:60%;
+        left:53%;
+    }
+    #asia-btn{
+        top:25%;
+        left:70%;
+    }
+}
+
+@media (max-width:721px){
+    .distribution-map{
+        display: flex;
+        flex-direction: column;
+        top:50px;
+    }
+    #antarctica-btn, #europe-btn, #oceania-btn, #namerica-btn, #samerica-btn, #africa-btn, #asia-btn{
+        left:0px;
+        position: relative;
+        top:-80px;
+        margin: 5px;
+    }
+    .centered-y {
+        top: 0%;
+        position: relative;
+        width: max-content;
+    }
+    
+    .content{
+        margin-left: 40px;
+    }
+    #logo{
+        font-size:1.5em;
+    }
+}
