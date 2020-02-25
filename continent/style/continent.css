@@ -18,34 +18,24 @@
 }
 /* END OF SVG */
 
-/* LOGO */
-#logo{
-    font-size:2.5em;
-    font-weight: 100;
-    color:#54c6eb;
-    position: absolute;
-    left: 10px;
-}
-/* END OF LOGO */
-html{
+body {
+	margin: 20px auto;
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
     background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-}
-body {
-	margin: 20px auto;
-    overflow-x: hidden;
-    font-family: 'Josefin Sans', sans-serif;
 
 }
 h2{
 	color: white;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
+
 
 .distribution-map {
     top:150px;
@@ -73,6 +63,12 @@ h2{
     border-radius: 50%;
     -webkit-box-shadow: 5px 2px 6px -6px #000000; 
     box-shadow: 5px 2px 6px -6px #000000;
+    background-color: rgba(255, 255, 255, 0.76);
+    border-right: 3px rgba(0, 0, 0, 0.096) solid;
+    border-bottom: 3px rgba(0, 0, 0, 0.075) solid;
+}
+.distribution-map .map-point:hover{
+    scale:1.1;
 }
 @media (min-width:722px){
     .centered-y {
@@ -92,11 +88,11 @@ h2{
         top:76%;
         left:82.5%;
     }
-    #namerica-btn{
+    #northamerica-btn{
         top:35%;
         left:20%;
     }
-    #samerica-btn{
+    #southamerica-btn{
        top:70%;
        left:27%;
     }
@@ -116,7 +112,7 @@ h2{
         flex-direction: column;
         top:50px;
     }
-    #antarctica-btn, #europe-btn, #oceania-btn, #namerica-btn, #samerica-btn, #africa-btn, #asia-btn{
+    #antarctica-btn, #europe-btn, #oceania-btn, #northamerica-btn, #southamerica-btn, #africa-btn, #asia-btn{
         left:0px;
         position: relative;
         top:-80px;
@@ -127,11 +123,13 @@ h2{
         position: relative;
         width: max-content;
     }
-    
     .content{
         margin-left: 40px;
     }
-    #logo{
-        font-size:1.5em;
+    h2{
+        font-weight: 100;
+        padding-left: 5px;
+        margin: 10px;
     }
 }
+

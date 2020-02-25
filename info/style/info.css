@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+#menu{
+    position: absolute;
+    top:300px;
+}
+#firstchart{
+    display: block;
+    height: 250px;
+}
+.chart{
+    position: relative;
+    width: 25%;
+    left: 150px;
+    top:150px;
+    background-color: rgba(255, 255, 255, 0.582);
+    border-radius: 5%;
+    margin: 10px;
+    text-align: center;
+}
+h1{
+    margin: 15px;
+    color:#048a81;
+    text-align: center;
+    font-weight: 200;
+}
+#charts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width:1024px){
+    .chart{
+        width: 350px;
+    }
+} 
+@media (max-width:700px){
+    #charts{
+        flex-direction: column;
+    }
+    .chart{
+        width: 250px;
+    }
+} 
+h2{
+    background-color: #048a8169;
+    padding: 10px;
+}
+#govform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
