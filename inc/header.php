@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="./inc/style.css">
         <link rel="stylesheet" type="text/css" href="./<?php echo "$page/style/$page"?>.css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap" rel="stylesheet">
-        <script src="./country/country.js"></script>
+        <script src="./continent/continent.js"></script>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="./inc/favicon.ico" type="image/x-icon">
         <!-- cdn to add charts -->

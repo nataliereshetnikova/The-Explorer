@@ -81,4 +81,12 @@ main{
         top:100px;
     }
 }
+.error{
+    background-color: rgba(255, 255, 255, 0.404);
+    color: rgb(212, 61, 81);
+    font-weight: 400;
+    border: 1px solid rgb(238, 116, 132);
+    font-size: 18px;
+    border-radius: 5px;
+}
 /* END OF LOGIN/SIGNUP */

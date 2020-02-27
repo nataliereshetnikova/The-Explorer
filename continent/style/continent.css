@@ -1,135 +1,231 @@
-/* SVG */
-#curve-shape
-{
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-#curve-shape path
-{
-  fill: white;
-  z-index: -1;
-}
-#curve-bottom{
-    position: absolute;
-    bottom: 0px;
-    fill:white;
-    z-index: -1;
-}
-/* END OF SVG */
-
 body {
-	margin: 20px auto;
-    overflow-x: hidden;
-    font-family: 'Josefin Sans', sans-serif;
-    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Josefin Sans', sans-serif;
 }
-h2{
-	color: white;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
+
+#continent img{
+  right: 35%;
+  top:25%;
+  position: absolute;
+  opacity: 0.3;
+  max-width: 800px;
+  max-height: 500px;
+  }
+  
+  .country{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 120px;
+    height: 400px;
+  }
+  #continent >h1{
+    color:#048a81;
     font-weight: 300;
+    position: relative;
+    top:100px;
+    text-align: center;
+    }
+
+    
+/* DROPDOWN */
+/* Dropdown Button */
+.dropbtn {
+margin-top:0px;
+color: #ffffff;
+background-color: rgba(255, 255, 255, 0.425);
+background-image: url('../img/search.png');
+background-position: 420px 25px;
+background-repeat: no-repeat;
+padding-left: 30px;
+font-size: 14px;
+border: none;
+cursor: pointer;
+text-align: left;
+text-transform: uppercase;
+font-weight: 100;
+width: 500px;
+border-radius: 10px;
+height: 100px;
+text-align: left;
+-webkit-box-shadow: 5px 2px 6px -6px #000000; 
+box-shadow: 5px 2px 6px -6px #000000;
 }
 
+/* The search field */
+#myInput {
+font-family: 'Josefin Sans', sans-serif;
+box-sizing: border-box;
+font-size: 18px;
+font-weight: 400;
+padding: 14px 20px 12px 45px;
+border: none;
+border-bottom: 1px solid #ddd;
+color: #609794;
+width: 500px;
+}
 
-.distribution-map {
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 1px solid #ddd;}
+.dropdown{
+position: absolute;
+left:30%;
+}
+.dropdown ul{
+padding-left: 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgba(255, 255, 255, 0.664);
+min-width: 230px;
+z-index: 1;
+width: 500px;
+max-height: 300px;
+overflow: auto;
+overflow-x: hidden;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+color: #048a81;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: 300;
+cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content li:hover {
+background-color: whitesmoke;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+/* END OF DROPDOWN STYLES */
+  
+/* List of chosen countries */
+#chosen{
+  color: white;
+}
+#chosen li{
+border: 1px solid white;
+padding: 5px;
+font-weight: 200;
+margin: 10px;
+}
+li.disabled {
+pointer-events:none; 
+opacity:0.6;        
+}
+/* END OF LIST OF CHOSEN COUNTRIES */
+
+
+  /* MEDIA */
+@media screen and (min-width:1200px){
+  .country{
+    top:280px;
+  }
+}
+@media screen and (max-width:1024px) and (min-width:801px){
+  #continent{
+    position: static;
+  }
+  .country{
+      top:100px;
+      width: 200px;
+      flex-direction: column;
+  }
+  #continent img{
+    max-width: 300px;
+  }
+  #chosen{
+    position: relative;
+    width: 330px;
+    flex-shrink: 0;
+    left: 350px;
+    top:-100px;
+  }
+  #curve-bottom{
+  display: none;
+  }
+  .dropdown{
+    position: absolute;
+    left: 300px;
+    top:100px;
+  }
+}
+
+@media screen and (max-width:800px) and (min-width:535px){
+  #continent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #continent img{
+    max-width: 300px;
+  }
+  .country{
+    top:100px;
+    width: 200px;
+    flex-direction: column;
+  }
+  .dropdown{
+    left: 250px;
+    width: 275px;
+  }
+  .dropbtn,.dropdown, .dropdown-content, #myInput{
+    background-image: none;
+    width: 275px;
+    top:0px;
+  }
+  #myDropdown{
+    top:100px;
+  }
+  #curve-bottom{
+    display: none;
+  }
+    #chosen{
+      position: relative;
+      width: 100%;
+    }
+}
+
+@media screen and (max-width:534px){
+  #continent>h1{
+    width: 100%;
     top:150px;
-    max-width: 1200px;
-	position: relative;
-	width: 100%;
-	padding: 20px;
-	margin: 0 auto;
-}
+  }
+  #continent img{
+    right:0;
+  }
+  #curve-bottom{
+    display: none;
+  }
+  #continent > img, #curve-shape{
+    z-index:-1;
+  }
+  .dropbtn,.dropdown, .dropdown-content, #myInput{
+    background-image: none;
+    width: 250px;
+    top:300px;
+  }
+  #myDropdown{
+    top:100px;
+  }
 
-.distribution-map > img {
-	width: 100%;
-	position: relative;
-	margin: 0;
-	padding: 0;
 }
+/* END OF MEDIA */
 
-.distribution-map .map-point {
-	cursor: pointer;
-	outline: none;
-	z-index: 0;
-	position: absolute;
-	width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    -webkit-box-shadow: 5px 2px 6px -6px #000000; 
-    box-shadow: 5px 2px 6px -6px #000000;
-    background-color: rgba(255, 255, 255, 0.76);
-    border-right: 3px rgba(0, 0, 0, 0.096) solid;
-    border-bottom: 3px rgba(0, 0, 0, 0.075) solid;
-}
-.distribution-map .map-point:hover{
-    scale:1.1;
-}
-@media (min-width:722px){
-    .centered-y {
-        position: absolute;
-        width: 100%;
-        top: 60%;
-    }
-    #antarctica-btn{
-        top:95%;
-        left:45%;
-    }
-    #europe-btn{
-        top:35%;
-        left:50%;
-    }
-    #oceania-btn{
-        top:76%;
-        left:82.5%;
-    }
-    #northamerica-btn{
-        top:35%;
-        left:20%;
-    }
-    #southamerica-btn{
-       top:70%;
-       left:27%;
-    }
-    #africa-btn{
-        top:60%;
-        left:53%;
-    }
-    #asia-btn{
-        top:25%;
-        left:70%;
-    }
-}
 
-@media (max-width:721px){
-    .distribution-map{
-        display: flex;
-        flex-direction: column;
-        top:50px;
-    }
-    #antarctica-btn, #europe-btn, #oceania-btn, #northamerica-btn, #southamerica-btn, #africa-btn, #asia-btn{
-        left:0px;
-        position: relative;
-        top:-80px;
-        margin: 5px;
-    }
-    .centered-y {
-        top: 0%;
-        position: relative;
-        width: max-content;
-    }
-    .content{
-        margin-left: 40px;
-    }
-    h2{
-        font-weight: 100;
-        padding-left: 5px;
-        margin: 10px;
-    }
-}
 

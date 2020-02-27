@@ -25,22 +25,39 @@ h1{
     text-align: center;
     font-weight: 200;
 }
+p{
+    color:#048a81;
+    font-weight: 300;
+}
 #charts{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-@media (max-width:1024px){
+@media screen and (max-width:1024px){
     .chart{
         width: 350px;
     }
 } 
-@media (max-width:700px){
+@media screen and (max-width:800px){
+    #curve-bottom{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top:150px;
+    }
     #charts{
         flex-direction: column;
     }
     .chart{
-        width: 250px;
+        width: 100%;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
     }
 } 
 h2{
